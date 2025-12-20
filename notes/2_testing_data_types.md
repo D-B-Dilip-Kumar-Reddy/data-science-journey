@@ -80,7 +80,7 @@ Examples:
 - Test status: Pass / Fail / Skip
 - Failure type: Crash / Timeout / Assertion
 - OS version
-- Device or camera model
+- Device
 
 Used for:
 - Grouping failures
@@ -165,6 +165,7 @@ Difference:
 Test Execution
 
 ↓
+
 Raw Data (logs, metrics, results)
 
 ↓
