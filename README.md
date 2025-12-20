@@ -79,13 +79,21 @@ This represents a shift from **reactive debugging** to **proactive, data-driven 
 ## Repository Structure (Planned)
 
 data-science-journey/
+
 │
+
 ├── README.md
+
 ├── phase-0-setup/
+
 ├── python-basics/
+
 ├── data-analysis/
+
 ├── machine-learning/
+
 ├── mini-projects/
+
 └── notes/
 
 
