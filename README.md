@@ -1,3 +1,5 @@
+![Phase](https://img.shields.io/badge/Phase-0%20Complete-brightgreen)
+
 # Data Science Journey
 
 ## Overview
@@ -108,5 +110,6 @@ To evolve from a test engineer who **finds failures** to a data professional who
 
 ---
 
-## Status
-🚀 Phase 0 — Setup & Orientation (In Progress)
+## Current Status
+- ✅ Phase 0: Foundations & Setup (Completed)
+- ⏳ Phase 1: Python & Data Handling (Next)
