@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+env/
+.ipynb_checkpoints/
+
+# Pytest
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Logs & Reports
+logs/
+reports/
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
