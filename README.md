@@ -2,83 +2,55 @@
 
 # Data Science Journey
 
+From Stability Testing to Data Science & ML
+
 ## Overview
-This repository documents my structured journey into **Data Science and Machine Learning**, with the goal of **upskilling and transitioning into a new domain**.
 
+This repository documents my **structured transition from stability testing / test engineering** into **Data Science and Machine Learning**, with a strong emphasis on:
+ - Core Python fundamentals
+ - Data thinking and decision logic
+ - Clean, maintainable, professional code
+ - Real-world problem mapping from testing to data science
 
-My background is in **stability and automation testing**, where I work with long-running test executions, large volumes of logs, and repeated failures and crashes. Through this journey, I aim to apply data-driven approaches to problems traditionally handled through manual or rule-based analysis.
-
----
-
-## Why I’m Learning Data Science
-
-My intent in learning Data Science and ML is to **enhance my skill set and enable a domain shift**.
-
-As a Stability Test Engineer, I routinely analyze:
-- Iteration-based test runs
-- Execution time trends
-- Failures, crashes, and intermittent defects
-- Large, unstructured log files
-
-With increasing test scale, I realized that **manual analysis does not scale** and often misses hidden patterns.  
-I believe **Data Science and Machine Learning can significantly simplify error and defect classification**, helping identify recurring issues and trends faster and more accurately.
+This is not a tutorial dump.
+It is a learning + portfolio repository.
 
 ---
 
-## How This Connects to Testing & Automation
+## Goals of This Repository
 
-Stability testing produces rich datasets that are ideal candidates for data analysis and machine learning.
-
-Examples:
-- Test logs → datasets
-- Error messages → features
-- Failure types → labels
-- Iterations → time-series data
-
-By applying Data Science techniques, I aim to:
-- Automatically classify errors and defects
-- Cluster similar failures together
-- Detect regressions early
-- Predict test instability before failures occur
-
-This represents a shift from **reactive debugging** to **proactive, data-driven insights**.
+- Build strong Python foundations suitable for data pipelines
+- Translate testing problems into data problems
+- Apply concepts incrementally through practice and mini-projects
+- Follow professional project structure and Git discipline
+- Create artifacts that a senior engineer can review and understand quickly
 
 ---
 
-## Testing ↔ Data Science Mapping
+## Learning Philosophy
 
-| Testing Concept | Data Science / ML Equivalent |
-|-----------------|------------------------------|
-| Test logs | Dataset |
-| Execution metrics | Features |
-| Failures / crashes | Labels |
-| Repeated defects | Patterns |
-| Stability issues | Trends |
-| Root cause analysis | Model inference |
-| Manual triage | Automated classification |
+### 1️⃣ Concepts before tools
 
----
+I prioritize understanding why something is needed before using libraries or frameworks.
 
-## Project Goals
+### 2️⃣ Notes and practice are separated
 
-- Build a strong foundation in Python for data analysis
-- Learn core Data Science concepts and workflows
-- Apply ML techniques to real-world test data
-- Reduce manual effort in failure and defect triaging
-- Create reusable tools for analyzing stability test results
+Notes (notes/) explain reasoning, mental models, and decisions
 
----
+Practice code (practice/) is executable, modular, and structured
 
-## Learning Approach
+### 3️⃣ Real-world domain mapping
+All examples are grounded in stability testing scenarios:
+- Test executions
+- PASS / FAIL / CRASH states
+- Retries and thresholds
+- Metrics and trends over time
 
-- **Hands-on first**: Code, analyze, visualize
-- **Testing-driven examples**: Use real testing scenarios
-- **Incremental learning**: Fundamentals → Applied ML
-- **Documentation-focused**: Track learnings and outcomes
+(No toy or unrelated examples.)
 
 ---
 
-## Repository Structure (Planned)
+## Repository Structure
 
 data-science-journey/
 
@@ -86,30 +58,173 @@ data-science-journey/
 
 ├── README.md
 
-├── phase-0-setup/
+│
 
-├── python-basics/
+├── notes/
 
-├── data-analysis/
+│   ├── phase_0_setup/
 
-├── machine-learning/
+│   │   └── environment_and_tooling.md
 
-├── mini-projects/
+│   │
 
-└── notes/
+│   ├── phase_1_python/
+
+│   │   ├── day_01_variables_data_types.md
+
+│   │   ├── day_02_conditionals.md
+
+│   │   ├── day_03_loops.md
+
+│   │   └── common_mistakes.md
+
+│
+
+├── practice/
+
+│   ├── phase_0_setup/
+
+│   │   └── env_validation.py
+
+│   │
+
+│   ├── phase_1_python/
+
+│   │   ├── day_01_data_types/
+
+│   │   ├── day_02_conditionals/
+
+│   │   └── day_03_loops/
+
+│
+
+├── mini_projects/
+
+│   └── stability_testing_analysis/
+
+│       ├── README.md
+
+│       ├── data/
+
+│       ├── src/
+
+│       └── notebooks/
+
+│
+
+├── tests/
+
+│
+
+├── utils/
+
+│
+
+├── requirements.txt
+
+├── ds_env.yaml
+
+└── .gitignore
 
 
 ---
 
-## Long-Term Vision
+## Learning Phases
 
-To evolve from a test engineer who **finds failures** to a data professional who:
-- Understands failure patterns
-- Predicts instability
-- Enables faster and smarter decision-making using data
+### 🟢 Phase 0 — Foundations & Setup
+
+Focus:
+
+- Environment setup
+- Git & GitHub workflow
+- Data Science vs ML vs Analytics
+- Data thinking for testers
+
+📂 Location
+- notes/phase_0_setup/
+- practice/phase_0_setup/
+
+### 🟡 Phase 1 — Python for Data Science
+
+Focus:
+
+- Variables and data types
+- Conditionals and decision logic
+- Loops and execution flow
+- Collections (lists, dicts, sets)
+- Functions and modular code
+
+Each day includes:
+
+- Concept notes
+- Practice scripts
+- Edge case handling
+- Testing-aligned examples
+
+📂 Location
+- notes/phase_1_python/
+- practice/phase_1_python/
+
+### 🔵 Phase 2 — Data Analysis (Upcoming)
+
+Focus:
+
+- NumPy
+- Pandas
+- Data cleaning
+- Aggregations
+- Exploratory Data Analysis (EDA)
+
+### 🔴 Phase 3 — Machine Learning (Upcoming)
+
+Focus:
+
+- Feature engineering
+- Classical ML algorithms
+- Model evaluation
+- Practical ML pipelines
 
 ---
 
-## Current Status
-- ✅ Phase 0: Foundations & Setup (Completed)
-- ⏳ Phase 1: Python & Data Handling (Next)
+### Mini Projects
+
+**Stability Testing Analysis**
+
+A realistic mini project built using synthetic test execution data to demonstrate:
+
+- Parsing execution data and logs
+- Classifying failures and crashes
+- Computing stability metrics
+- Identifying flaky behavior
+- Visualizing trends across iterations
+
+📂 Location
+
+- mini_projects/stability_testing_analysis/
+
+This project exists to show end-to-end application, not isolated scripts.
+
+---
+
+## How to Run the Code
+
+Conda environment
+```
+conda env create -f ds_env.yaml
+conda activate ds-env
+```
+
+Run a practice script
+```
+python practice/phase_1_python/day_02_conditionals/status_classifier.py
+```
+
+---
+
+## Testing
+
+Basic unit tests are included to validate core logic:
+
+pytest tests/
+
+---
