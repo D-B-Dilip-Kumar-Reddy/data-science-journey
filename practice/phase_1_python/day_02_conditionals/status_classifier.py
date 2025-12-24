@@ -1,35 +1,44 @@
 """
-Status classification logic.
+Status classification utilities.
 
-This module converts raw test execution status into
-normalized, decision-ready outcomes.
+This module converts raw execution outcomes from
+automotive center-stack stability tests into
+normalized, well-defined categories.
+
+Responsibilities:
+- Normalize raw input
+- Classify into known execution states
+- Never make decisions
 """
 
 VALID_STATUSES = {"PASS", "FAIL", "CRASH", "TIMEOUT"}
 
 
-def normalize_status(status: str) -> str:
+def normalize_status(value) -> str:
     """
     Normalize raw status input.
 
-    - Strips whitespace
-    - Converts to uppercase
-    - Handles None safely
+    Rules:
+    - Accept only strings
+    - Strip whitespace
+    - Convert to uppercase
+    - Return 'UNKNOWN' for invalid or empty input
     """
-    if status is None:
+    if not isinstance(value, str):
         return "UNKNOWN"
 
-    return status.strip().upper()
+    normalized = value.strip().upper()
+    return normalized if normalized else "UNKNOWN"
 
 
-def classify_status(status: str) -> str:
+def classify_status(value) -> str:
     """
-    Classify execution status into known categories.
+    Classify execution status into a known category.
 
-    Returns:
-        One of: PASS, FAIL, CRASH, TIMEOUT, UNKNOWN
+    Returns one of:
+    PASS, FAIL, CRASH, TIMEOUT, UNKNOWN
     """
-    normalized = normalize_status(status)
+    normalized = normalize_status(value)
 
     if normalized in VALID_STATUSES:
         return normalized

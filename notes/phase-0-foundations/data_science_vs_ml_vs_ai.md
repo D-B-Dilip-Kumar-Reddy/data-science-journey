@@ -1,63 +1,151 @@
-# Data Science vs Machine Learning vs Artificial Intelligence
+# Data Science vs Machine Learning vs Artificial Intelligence  
+(Applied to Automotive Center-Stack Stability Testing)
 
 ## 1. What These Terms Mean
 
-**Data Science**
-- Extracting insights from data
-- Cleaning, analyzing, summarizing, and visualizing data
-- Often descriptive and diagnostic
+### Data Science
+Data Science focuses on **understanding data**, identifying patterns, and extracting insights to support decisions.
 
-**Machine Learning**
-- Subset of Data Science
-- Uses data to learn patterns automatically
-- Focuses on prediction and generalization
+In practice, it includes:
+- Data collection
+- Data cleaning
+- Aggregation and summarization
+- Trend and pattern analysis
+- Root-cause exploration
 
-**Artificial Intelligence**
-- Broad umbrella
-- Systems that mimic intelligent behavior
-- ML is one way to build AI systems
+Data Science **does not require Machine Learning**.
 
 ---
 
-## 2. Why This Distinction Matters
+### Machine Learning
+Machine Learning focuses on **learning patterns from data automatically** and using those patterns to make predictions or classifications.
 
-Confusing these terms leads to:
-- Overengineering simple problems
-- Using ML where simple analysis is enough
-- Poor problem framing
+In practice, it includes:
+- Predictive models
+- Classification models
+- Anomaly detection
+- Pattern generalization to unseen data
 
-Most real-world problems start as **Data Science problems**, not ML problems.
+Machine Learning **cannot exist without data**, so it relies on Data Science foundations.
+
+---
+
+### Artificial Intelligence
+Artificial Intelligence focuses on **intelligent decision-making and autonomous behavior**.
+
+In practice, AI systems:
+- Decide what action to take
+- Combine rules, heuristics, and ML outputs
+- Execute actions automatically
+
+Not all AI systems use Machine Learning.
+
+---
+
+## 2. Correct Relationship Between DS, ML, and AI
+
+The correct and industry-accepted relationships are:
+
+- **Machine Learning is a subset of Artificial Intelligence**
+- **Machine Learning is also a core subset of Data Science**
+
+This means Machine Learning sits at the **intersection of Data Science and AI**.
+
+Important clarifications:
+- Data Science is broader than Machine Learning
+- Artificial Intelligence is broader than Machine Learning
+- Data Science and AI are **not** subsets of each other
 
 ---
 
 ## 3. Mental Model
 
-- Data Science → *Understand what happened*
-- Machine Learning → *Predict what will happen*
-- AI → *Act intelligently based on predictions*
+- **Data Science** → Understand *what is happening* and *why*
+- **Machine Learning** → Predict *what is likely to happen*
+- **Artificial Intelligence** → Decide *what action to take*
 
 ---
 
-## 4. Application to Stability Testing
+## 4. Where Data Analytics Fits
 
-| Problem | Correct Approach |
-|------|----------------|
-| Crash frequency over time | Data Science |
-| Flaky test detection | Data Science + rules |
-| Predict next failure | Machine Learning |
-| Auto-healing test pipelines | AI system |
+Data Analytics is often confused with Data Science, but it is more limited in scope.
+
+### Data Analytics Focuses On:
+- Dashboards and reports
+- KPIs and metrics
+- Historical and current system behavior
+- Answering **“what happened?”**
+
+### Data Science Goes Further:
+- Explains **why** issues occur
+- Identifies hidden patterns
+- Correlates multiple signals
+- Supports predictive and decision systems
 
 ---
 
-## 5. Common Mistakes
+### Center-Stack Stability Example
 
-- Jumping to ML without understanding data
-- Treating analytics dashboards as ML
-- Assuming AI is required for automation
+| Task | Analytics | Data Science | ML | AI |
+|----|----------|-------------|----|----|
+| PASS/FAIL dashboard | ✅ | ❌ | ❌ | ❌ |
+| UI freeze frequency trend | ✅ | ✅ | ❌ | ❌ |
+| Memory leak pattern detection | ❌ | ✅ | ❌ | ❌ |
+| Predict system hang | ❌ | ❌ | ✅ | ❌ |
+| Auto-recover infotainment system | ❌ | ❌ | ✅ | ✅ |
 
 ---
 
-## 6. Interview Perspective
+## 5. Automotive Center-Stack Stability Perspective
 
-> “Most testing problems are data science problems first.  
-I only consider ML after establishing stable patterns and clean data.”
+Typical center-stack stability testing generates data such as:
+- UI response times
+- App ANR counts
+- Memory usage over time
+- Media playback errors
+- System service restarts
+- Long-run execution outcomes
+
+### Most Problems Are Data Science Problems First
+
+Examples:
+- Gradual increase in memory usage
+- Increase in UI lag after long uptime
+- Correlation between media usage and system instability
+
+These are solved using:
+- Aggregation
+- Trend analysis
+- Pattern recognition
+- Rule-based classification
+
+---
+
+## 6. When Machine Learning Is Actually Needed
+
+Machine Learning is introduced **only when**:
+- Patterns cannot be expressed using rules
+- Prediction is required (e.g., early warning)
+- System behavior becomes too complex for manual analysis
+
+Example:
+- Predicting when a center-stack system will hang based on resource usage patterns
+
+---
+
+## 7. Where AI Appears in Stability Testing
+
+AI appears when the system:
+- Decides recovery strategies automatically
+- Chooses between restart, reboot, or stop
+- Adapts behavior based on historical outcomes
+
+Example:
+- An auto-healing stability test system that detects abnormal behavior, diagnoses the likely cause, and recovers automatically to continue testing
+
+---
+
+## 8. Interview Perspective
+
+> “In automotive center-stack stability testing, most problems are data science problems first.  
+Machine Learning is applied only when prediction is required, and AI is used when automated recovery or decision-making is needed.”

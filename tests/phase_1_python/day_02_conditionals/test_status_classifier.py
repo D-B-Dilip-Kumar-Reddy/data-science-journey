@@ -4,13 +4,15 @@ from practice.phase_1_python.day_02_conditionals.status_classifier import (
 )
 
 
-def test_normalize_status_basic():
+def test_normalize_status_valid():
     assert normalize_status("pass") == "PASS"
     assert normalize_status(" FAIL ") == "FAIL"
 
 
-def test_normalize_status_none():
+def test_normalize_status_invalid():
+    assert normalize_status("") == "UNKNOWN"
     assert normalize_status(None) == "UNKNOWN"
+    assert normalize_status(404) == "UNKNOWN"
 
 
 def test_classify_known_statuses():
@@ -22,4 +24,3 @@ def test_classify_known_statuses():
 
 def test_classify_unknown_status():
     assert classify_status("NETWORK_ERROR") == "UNKNOWN"
-    assert classify_status("") == "UNKNOWN"
